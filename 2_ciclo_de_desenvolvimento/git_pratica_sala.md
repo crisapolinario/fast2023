@@ -18,8 +18,8 @@ Certifique-se de ter o Git instalado em sua máquina.
 Configure seu nome de usuário e endereço de e-mail no Git.
 
 ```bash
-$ git config --global user.name "Fulano da Silva"
-$ git config --global user.email fulanodasilva.git@gmail.com
+git config --global user.name "Fulano da Silva"
+git config --global user.email fulanodasilva.git@gmail.com
 ```
 
 ### Criação do Repositório:
@@ -29,7 +29,7 @@ Crie um diretório para o projeto e navegue até ele pelo terminal.
 Inicialize um repositório Git.
 
 ```bash
-$ git init
+git init
 ```
 
 ### Adicionando arquivos em uma branch separada
@@ -39,16 +39,16 @@ Crie um arquivo chamado test.py e adicione algum conteúdo a ele.
 Criação de uma Branch:
 
 ```bash
-$ git checkout -b feature/teste
+git checkout -b feature/teste
 ```
 
 Commit o arquivo recem criado na Nova Branch:
 
 ```bash
-$ git add .
-$ git commit -m "Adiciona app.py e test.py".
+git add .
+git commit -m "Adiciona app.py e test.py".
 # ou
-$ git commit -a -m "Adiciona app.py test.py"
+git commit -a -m "Adiciona app.py test.py"
 ```
 
 ### Adicionando arquivos no main
@@ -67,12 +67,12 @@ Faça um commit das alterações.
 Volte à branch feature/teste usando o comando
 
 ```bash
-$ git checkout feature/teste
+git checkout feature/teste
 ```
 Realize o merge da branch principal na branch de funcionalidade usando o comando
 
 ```bash
-$ git merge main
+git merge main
 ```
 
 Resolva possíveis conflitos, se houver.
@@ -87,8 +87,8 @@ Faça um commit das alterações.
 Volte à branch principal e faça o merge final da funcionalidade.
 
 ```bash
-$ git checkout main
-$ git merge feature/teste
+git checkout main
+git merge feature/teste
 ```
 
 Observe a estrutura do seu repositório, incluindo commits e branches
