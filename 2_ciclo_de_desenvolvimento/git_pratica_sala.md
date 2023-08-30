@@ -3,10 +3,10 @@
 ## O que deve ser feito?
 
 1. Criar um repositório local
-2. Crie um commit adicionando o arquivo test.txt nesse repositório numa branch a parte
-3. Volte para a main e adicione um arquivo test2.txt (commit)
+2. Crie um commit adicionando o arquivo test.py nesse repositório numa branch a parte
+3. Volte para a main e adicione um arquivo app.py (commit)
 4. Traga as mudanças da main para sua branch criada no passo 2
-5. Adicione outro arquivo test3.txt nessa branch e commit
+5. Adicione outro arquivo another_test.py nessa branch e commit
 6. Traga as mudanças feitas na branch criada para a main
 
 
@@ -34,23 +34,21 @@ $ git init
 
 ### Adicionando arquivos em uma branch separada
 
-Crie um arquivo chamado test.txt e adicione algum conteúdo a ele.
+Crie um arquivo chamado test.py e adicione algum conteúdo a ele.
 
 Criação de uma Branch:
 
 ```bash
-$ git checkout -b feature/novo_texto
+$ git checkout -b feature/teste
 ```
 
-Nesta branch, adicione um arquivo chamado navbar.html com uma estrutura básica de uma barra de navegação.
-
-Commit na Nova Branch:
+Commit o arquivo recem criado na Nova Branch:
 
 ```bash
 $ git add .
-$ git commit -m "Adiciona navbar".
+$ git commit -m "Adiciona app.py e test.py".
 # ou
-$ git commit -a -m "Adiciona navbar"
+$ git commit -a -m "Adiciona app.py test.py"
 ```
 
 ### Adicionando arquivos no main
@@ -60,17 +58,16 @@ Volta à Branch Principal:
 ```bash
 git checkout main
 ```
-### Desenvolvimento na Branch Principal:
 
-Adicione mais conteúdo ao arquivo index.html na branch principal.
+Crie e adicione conteúdo ao arquivo app.py na branch principal.
 Faça um commit das alterações.
 
 ### Merge main -> branch
 
-Volte à branch feature/navbar usando o comando
+Volte à branch feature/teste usando o comando
 
 ```bash
-$ git checkout feature/navbar
+$ git checkout feature/teste
 ```
 Realize o merge da branch principal na branch de funcionalidade usando o comando
 
@@ -81,10 +78,17 @@ $ git merge main
 Resolva possíveis conflitos, se houver.
 
 ## Adiciona mais arquivos na branch
-Adicione mais estilos ao arquivo style.css na branch de funcionalidade.
+
+Adicione mais códigos ao arquivo another_test.py na branch de funcionalidade.
 Faça um commit das alterações.
 
 ## Merge branch -> main
 
 Volte à branch principal e faça o merge final da funcionalidade.
+
+```bash
+$ git checkout main
+$ git merge feature/teste
+```
+
 Observe a estrutura do seu repositório, incluindo commits e branches
