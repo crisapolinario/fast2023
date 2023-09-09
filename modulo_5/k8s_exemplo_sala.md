@@ -77,9 +77,36 @@ spec:
 kubectl apply -f pod.yaml
 ```
 
-
 #### Listando os pods com mais informações:
 
 ```bash
 kubectl get pods --all-namespaces -o wide 
+```
+
+#### Criando um pod com múltiplos containers:
+```yaml
+# pod-multicontainer.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multicontainer
+  namespace: fast # por padrao ficaria no ns default
+spec:
+  containers:
+    - name: nginx
+      image: nginx:1.14.2
+      ports:
+      - containerPort: 80
+    - name: hello
+      image: busybox:1.28
+      command: ['sh', '-c', 'echo "Hello, Kubernetes!" && sleep 3600']
+```
+
+```bash
+kubectl apply -f pod-multicontainer.yaml
+```
+
+Ver informações de cada container
+```bash
+kubectl describe pod multicontainer -n fast
 ```
