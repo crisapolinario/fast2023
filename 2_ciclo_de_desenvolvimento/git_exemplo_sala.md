@@ -17,7 +17,7 @@ Rodar este comando em um reposítorio já trackeado nao deve alterar nada.
 Copia o código de um repositório para o local, trazendo o histórico de commits e branches.
 
 ```bash
-git clone git@github.com:docker/cli.git
+git clone git@github.com:RomulosDS/MyStuff.git
 ```
 
 [Documentaçao](https://git-scm.com/docs/git-clone) 
