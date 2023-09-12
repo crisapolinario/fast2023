@@ -15,7 +15,7 @@ Rodar este comando em um reposítorio já trackeado nao deve alterar nada.
 
 ### clone
 Copia o código de um repositório para o local, trazendo o histórico de commits e branches.
-
+Neste caso estamos clonando o repositório de Romulos: https://github.com/RomulosDS/MyStuff
 ```bash
 git clone git@github.com:RomulosDS/MyStuff.git
 ```
