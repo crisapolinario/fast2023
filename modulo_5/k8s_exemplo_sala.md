@@ -110,3 +110,100 @@ Ver informações de cada container
 ```bash
 kubectl describe pod multicontainer -n fast
 ```
+
+### ReplicaSets
+
+```yaml
+# replica-set.yaml
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx
+  namespace: fast
+  labels:
+    app: hello-world-nginx
+    tier: nginx
+spec:
+  # modifique o número de replicas de acordo com o seu caso
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: nginx
+  template:
+    metadata:
+      labels:
+        tier: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.14.2
+          ports:
+          - containerPort: 80
+```
+
+Listando informações do replica set:
+
+```bash
+kubectl get replicaset -n fast # ou rs
+```
+
+```bash
+kubectl describe rs/nginx -n fast
+```
+
+Deletando um pod criado e vendo o que acontece:
+```bash
+kubectl delete pod/nginx-<id> -n fast
+kubectl get pods -n fast
+```
+
+### Deployments
+
+```yaml
+#  deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+```
+
+```bash
+kubectl get deployments -n fast
+```
+
+```bash
+kubectl get rs -n fast
+```
+
+```bash
+kubectl get pods -n fast
+```
+
+### Services
+
+```bash
+kubectl expose deployment/nginx-deployment --port=80 --type=NodePort
+```
+
+// [TODO] ver como a gente pode ostrar acessando uma URL atra'ves do service.
+
+### Jobs
+
+### Cronjobs
