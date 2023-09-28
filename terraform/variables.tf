@@ -41,8 +41,14 @@ variable "ssh_key_path_default_user" {
   default     = "~/.ssh/ecdsa_ansible.pub"
 }
 
-variable "default_user" {
-  description = "Default User SSH"
+variable "bucket_tfsatefile_name" {
+  description = "Name of the Bucket to save Statefile"
   type        = string
-  default     = "ansible"
+  default     = "bucket-statefile-fast2023"
+}
+
+variable "storage_class" {
+  description = "Name of the Bucket to save Statefile"
+  type        = string
+  default     = "standard"
 }
