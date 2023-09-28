@@ -1,5 +1,4 @@
 project_name: "fast2023"
-project_domain: "cesar.school"
 
 jenkins_image: "jenkins/jenkins"
 jenkins_version: "2.424-jdk21"
@@ -11,7 +10,3 @@ sonarqube_db_password: "sonar"
 sonarqube_db_name: "sonar"
 sonarqube_db_server: "sonardb"
 sonarqube_db_server_port: "5432"
-
-traefik_image: 'traefik'
-traefik_version: '2.10.4'
-traefik_credential: 'admin:$$apr1$$JhXKpLQF$$80Dlb8LyQ02ggKO.5hK1s0'

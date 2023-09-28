@@ -14,7 +14,7 @@ resource "google_compute_instance" "default" {
     access_config {}
   }
 
-  tags = ["allow-http-services", "allow-ssh"]
+  tags = ["allow-sonar", "allow-jenkins", "allow-ssh"]
 
   boot_disk {
     initialize_params {
