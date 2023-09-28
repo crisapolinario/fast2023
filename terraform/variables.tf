@@ -19,7 +19,6 @@ variable "google_instance_type" {
   description = "Google Instance Type"
   type        = string
   default     = "e2-standard-2"
-  # default     = "e2-small"
 }
 
 variable "google_instance_image" {
@@ -28,16 +27,9 @@ variable "google_instance_image" {
   default     = "centos-cloud/centos-stream-8"
 }
 
-# variable "google_network" {
-#   description = "Google Network Name"
-#   type        = string
-#   default     = "default"
-# }
-
 variable "ssh_key_path_default_user" {
   description = "Path SSH Key for Default User"
   type        = string
-  default     = "~/.ssh/ecdsa_ansible.pub"
 }
 
 variable "default_user" {

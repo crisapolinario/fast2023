@@ -14,7 +14,7 @@ resource "google_compute_firewall" "allow-http-services" {
 }
 
 resource "google_compute_firewall" "allow-ssh" {
-  name    = "allow-ssh"
+  name    = "fast-allow-ssh"
   network = google_compute_network.network.name
 
   allow {
