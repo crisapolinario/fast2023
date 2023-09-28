@@ -1,19 +1,16 @@
 variable "google_region" {
   description = "Google Region"
   type        = string
-  default     = "us-central1"
 }
 
 variable "google_zone" {
   description = "Google Zone"
   type        = string
-  default     = "us-central1-a"
 }
 
 variable "google_project_number" {
   description = "Google Project Number"
   type        = string
-  default     = "305666185264"
 }
 
 variable "google_instance_type" {
@@ -29,11 +26,11 @@ variable "google_instance_image" {
   default     = "centos-cloud/centos-stream-8"
 }
 
-variable "google_network" {
-  description = "Google Network Name"
-  type        = string
-  default     = "default"
-}
+# variable "google_network" {
+#   description = "Google Network Name"
+#   type        = string
+#   default     = "default"
+# }
 
 variable "ssh_key_path_default_user" {
   description = "Path SSH Key for Default User"

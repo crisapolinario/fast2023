@@ -7,12 +7,14 @@ resource "google_compute_instance" "default" {
     ssh-keys = "ansible:${file(var.ssh_key_path_default_user)}"
   }
 
+
   network_interface {
-    network = var.google_network
+    network = google_compute_network.network.name
+    subnetwork = google_compute_subnetwork.subnet.name
     access_config {}
   }
 
-  tags = ["http-server", "https-server"]
+  tags = ["allow-http-services", "allow-ssh"]
 
   boot_disk {
     initialize_params {
