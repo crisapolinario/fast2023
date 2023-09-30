@@ -39,7 +39,7 @@ run-name: ${{ github.actor }} está aprendendo GitHub Actions
 ```
 É opcional, e define o nome da "run" que serão geradas a partir dessa workflow. Será mostrado na lista de runs na aba de "Actions". Aqui utilizamos uma variável entre `{{ }}` para demonstrar esta funcionalidade.
 
-![Name and run name](./assets/name_and_run_name.png)
+![Name and run name](../assets/name_and_run_name.png)
 
 ### on
 
