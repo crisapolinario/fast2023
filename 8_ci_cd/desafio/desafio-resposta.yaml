@@ -1,0 +1,14 @@
+name: todo-pipeline
+run-name: Pipeline de testes
+on: [push]
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: npm install
+      - run: npm run test
+      - run: npm run feature-tests
