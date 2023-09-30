@@ -74,3 +74,7 @@ check-eslint-version:
 ```
 
 Define os passos que serão rodados pelo job. Neste caso podemos ver passos que estão utilizando `actions`da comunidade, e passos que estão rodando apenas scripts bash.
+
+Documentação das actions utilizadas:
+* [checkout](https://github.com/actions/checkout)
+* [setup-node](https://github.com/actions/setup-node)
