@@ -1,0 +1,26 @@
+server_url: "http://graylog:9001/api/"
+server_api_token: "q0r5r20201kirvpdlvcq5m3hr474a39b31t0qouf6rapf4k4ble"
+update_interval: 10
+tls_skip_verify: true
+send_status: true
+list_log_files: /var/log
+node_id: graylog-forwarder
+collector_id: file:/etc/graylog/collector-sidecar/collector-id
+cache_path: /var/cache/graylog/collector-sidecar
+log_path: /var/log/graylog/collector-sidecar
+log_rotation_time: 86400
+log_max_age: 604800
+tags:
+  - linux
+  - docker
+backends:
+  - name: nxlog
+    enabled: false
+    binary_path: /usr/bin/nxlog
+    configuration_path: /etc/graylog/collector-sidecar/generated/nxlog.conf
+    executable: /usr/bin/nxlog
+  - name: filebeat
+    enabled: false
+    binary_path: /usr/bin/filebeat
+    configuration_path: /etc/graylog/collector-sidecar/generated/filebeat.yml
+    executable: /usr/bin/filebeat
