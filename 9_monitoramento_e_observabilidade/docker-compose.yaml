@@ -22,6 +22,8 @@ services:
       - "3000:3000"
     deploy:
       replicas: 1
+    environment:
+      GF_INSTALL_PLUGINS=alexanderzobnin-zabbix-app
     logging:
       driver: "gelf"
       options:
@@ -143,6 +145,16 @@ services:
       options:
         gelf-address: tcp://lab-vm1:12201
         tag: cadvisor
+
+  # Serviço Node Exporter
+  node_exporter:
+    image: prom/node-exporter
+    deploy:
+      mode: global
+    ports:
+      - "9100:9100"
+    networks:
+      - monitoring
 
   # MySQL (Dependência do Zabbix)
   mysql-server:
