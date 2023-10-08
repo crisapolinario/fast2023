@@ -2,6 +2,8 @@
 
 ![Diagrama](assets/diagrama.png "Diagrama do Lab")
 
+![Diagrama de Integracoes](assets/diagrama_integracoes.jpg "Diagrama do Lab")
+
 Este laboratório tem como objetivo proporcionar uma experiência prática na configuração de um ambiente local composto por máquinas virtuais (VMs) utilizando o Vagrant e o Docker. O foco principal será o monitoramento dos serviços implantados em um cluster Swarm nas VMs.
 
 ## Pré-requisitos

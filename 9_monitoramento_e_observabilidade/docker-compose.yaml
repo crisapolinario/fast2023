@@ -23,7 +23,7 @@ services:
     deploy:
       replicas: 1
     environment:
-      GF_INSTALL_PLUGINS=alexanderzobnin-zabbix-app
+      - GF_INSTALL_PLUGINS=alexanderzobnin-zabbix-app
     logging:
       driver: "gelf"
       options:
