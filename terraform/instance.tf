@@ -12,7 +12,7 @@ resource "google_compute_instance" "default" {
     access_config {}
   }
 
-  tags = ["http-server", "https-server"]
+  tags = ["http-server", "allow-ssh"]
 
   boot_disk {
     initialize_params {

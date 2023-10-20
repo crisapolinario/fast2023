@@ -13,7 +13,7 @@ variable "google_zone" {
 variable "google_project_number" {
   description = "Google Project Number"
   type        = string
-  default     = "305666185264"
+  default     = "604684820475"
 }
 
 variable "google_instance_type" {
@@ -38,11 +38,23 @@ variable "google_network" {
 variable "ssh_key_path_default_user" {
   description = "Path SSH Key for Default User"
   type        = string
-  default     = "~/.ssh/ecdsa_ansible.pub"
+  default     = "~/.ssh/id_ed25519.pub"
 }
 
 variable "default_user" {
   description = "Default User SSH"
   type        = string
   default     = "ansible"
+}
+
+variable "bucket_tfsatefile_name" {
+  description = "Name of the Bucket to save Statefile"
+  type        = string
+  default     = "bucket-statefile-fast2023-brayner"
+}
+
+variable "storage_class" {
+  description = "Name of the Bucket to save Statefile"
+  type        = string
+  default     = "standard"
 }
